@@ -7,7 +7,7 @@ function formatearNombre(nombre){
 
 function contarLetras(frase){
     const result = document.getElementById("resultado2")
-    let fraseSinEspacios = frase.trim(' ')
+    let fraseSinEspacios = frase.trim().replaceAll(" ", "")
     result.innerHTML= "la frase tiene: " + fraseSinEspacios.length + " letras" 
 }
 
