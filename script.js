@@ -89,4 +89,24 @@ function mayorNum(numeros){
     result.innerHTML = "los numeros pares son: " + pares
 }
   
+function descripcionUsuario(){
+    const usuario = {
+    nombre: "Ana",
+    edad: 20,
+    activo: false
+    }
+    const result = document.getElementById("resultado8")
 
+    result.innerHTML = usuario.nombre + " tiene " + usuario.edad 
+}
+
+function activarUsuario(){
+    const usuario = {
+    nombre: "Ana",
+    edad: 20,
+    activo: false
+    }
+    const result = document.getElementById("resultado9")
+    usuario.activo = true
+    result.innerHTML = "estado usuario: " + usuario.activo
+}
