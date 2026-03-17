@@ -53,12 +53,40 @@ function sumarNums(numeros){
 function mayorNum(numeros){
     const result = document.getElementById("resultado6")
     const arrayNumeros = numeros.split(',')
-    let mayor = 0;
+    let mayor = Number(arrayNumeros[0].trim());
 
-    var resultado = 0
     for(let i = 0; i <= arrayNumeros.length - 1; i++){
-        if(arrayNumeros[i] > mayor) {mayor = arrayNumeros[i]}
+        let num = Number(arrayNumeros[i].trim())
+
+        if(!isNaN(num) && num > mayor){
+            mayor = num
+        }
     }
     console.log(mayor)
     result.innerHTML = "el mayor numero es: " + mayor
 }
+
+    function soloPares(numeros){
+    const result = document.getElementById("resultado7")
+
+    const arrayNumeros = numeros.split(',')
+
+    let pares = []
+
+    for(let i = 0; i < arrayNumeros.length; i++){
+        let texto = arrayNumeros[i].trim()
+
+        if(texto === "") continue
+
+        let num = Number(texto)
+
+        if(!isNaN(num) && num % 2 === 0){
+            pares.push(num)
+        }
+    }
+
+    console.log(pares)
+    result.innerHTML = "los numeros pares son: " + pares
+}
+  
+
