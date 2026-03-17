@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="ej1">
+        <h1>EJ1</h1>
         <input type="text" id="nombre" placeholder="ingrese su nombre">
         <button onclick="formatearNombre(document.getElementById('nombre').value)">enviar</button>
         <h3>resultado:</h3>
@@ -15,6 +16,7 @@
     </div>
 
     <div class="ej2">
+        <h1>EJ2</h1>
         <input type="text" id="letras" placeholder="ingrese aqui">
         <button onclick="contarLetras(document.getElementById('letras').value)">enviar</button>
         <h3>resultado:</h3>
@@ -22,10 +24,37 @@
     </div>
 
     <div class="ej3">
-        <input type="text" id="letras" placeholder="ingrese aqui">
-        <button onclick="contarLetras(document.getElementById('letras').value)">enviar</button>
+        <h1>EJ3</h1>
+        <input type="number" id="n1" placeholder="0">
+        <input type="number" id="n2" placeholder="0">
+        <input type="number" id="n3" placeholder="0">
+        <button onclick="numMax(document.getElementById('n1').value, document.getElementById('n2').value, document.getElementById('n3').value)">enviar</button>
         <h3>resultado:</h3>
-        <p id="resultado3 "></p>
+        <p id="resultado3"></p>
+    </div>
+
+    <div class="ej4">
+        <h1>EJ4</h1>
+        <input type="text" id="contra" placeholder="ingrese su contraseña">
+        <button onclick="validarPassword(document.getElementById('contra').value)">enviar</button>
+        <h3>resultado:</h3>
+        <p id="resultado4"></p>
+    </div>
+
+    <div class="ej5">
+        <h1>EJ5</h1>
+        <input type="text" id="numeros" placeholder="ingrese una serie de numeros">
+        <button onclick="sumarNums(document.getElementById('numeros').value)">enviar</button>
+        <h3>resultado:</h3>
+        <p id="resultado5"></p>
+    </div>
+
+    <div class="ej6">
+        <h1>EJ6</h1>
+        <input type="text" id="numeros" placeholder="ingrese una serie de numeros">
+        <button onclick="mayorNum(document.getElementById('numeros').value)">enviar</button>
+        <h3>resultado:</h3>
+        <p id="resultado6"></p>
     </div>
 </body>
 </html>
