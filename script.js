@@ -119,6 +119,6 @@ function calcularPrecio(){
     {nombre:"Monitor", precio:200}
     ]
     const result = document.getElementById("resultado10")
-    let resultado =    
-    result.innerHTML = "estado usuario: " + usuario.activo
+    let resultado =    productos[0].precio + productos[1].precio + productos[2].precio 
+    result.innerHTML = "precio total " + resultado
 }
