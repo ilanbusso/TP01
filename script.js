@@ -110,3 +110,15 @@ function activarUsuario(){
     usuario.activo = true
     result.innerHTML = "estado usuario: " + usuario.activo
 }
+
+function calcularPrecio(){
+    const productos = [
+
+    {nombre:"Mouse", precio:10},
+    {nombre:"Teclado", precio:25},
+    {nombre:"Monitor", precio:200}
+    ]
+    const result = document.getElementById("resultado10")
+    let resultado =    
+    result.innerHTML = "estado usuario: " + usuario.activo
+}
