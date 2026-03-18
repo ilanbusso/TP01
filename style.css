@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #1e2a38;
+    padding: 2%;
+}
+
+body > div {
+    background-color: white;
+    border-left: 0.5em solid #005baa;
+    border-radius: 1em;
+    padding: 2%;
+    margin-bottom: 2%;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    color: #005baa;
+    font-size: 180%;
+    margin-bottom: 1%;
+}
+
+h3 {
+    margin-top: 1.5%;
+    margin-bottom: 0.5%;
+    color: #003d73;
+    font-size: 110%;
+}
+
+input {
+    width: 100%;
+    padding: 1%;
+    margin-top: 0.8%;
+    margin-bottom: 1%;
+    border: 0.1em solid #c7d4e2;
+    border-radius: 0.6em;
+    font-size: 100%;
+    background-color: #f9fbfd;
+    outline: none;
+}
+
+input:focus {
+    border-color: #005baa;
+    background-color: #ffffff;
+}
+
+button {
+    background-color: #005baa;
+    color: white;
+    border: none;
+    padding: 1% 2%;
+    border-radius: 0.6em;
+    font-size: 100%;
+    cursor: pointer;
+    margin-top: 0.5%;
+}
+
+button:hover {
+    background-color: #00457f;
+}
+
+p {
+    background-color: #eef4fa;
+    border: 0.1em solid #d5e2ef;
+    border-radius: 0.6em;
+    padding: 1%;
+    min-height: 3em;
+    font-size: 100%;
+    color: #1e2a38;
+    word-wrap: break-word;
+}
+
+/* Para que los ejercicios queden ordenados */
+.ej1, .ej2, .ej3, .ej4, .ej5, .ej6, .ej7, .ej8, .ej9, .ej10,
+.ej11, .ej12, .ej13, .ej14, .ej15, .ej16, .ej17, .ej18, .ej19,
+.ej20, .ej21, .ej22 {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1%;
+}
+
+/* Los inputs múltiples un poco más prolijos */
+.ej3 input,
+.ej16 input,
+.ej22 input {
+    width: 49%;
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .ej1, .ej2, .ej3, .ej4, .ej5, .ej6, .ej7, .ej8, .ej9, .ej10,
+    .ej11, .ej12, .ej13, .ej14, .ej15, .ej16, .ej17, .ej18, .ej19,
+    .ej20, .ej21, .ej22 {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .ej3 input,
+    .ej16 input,
+    .ej22 input {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
