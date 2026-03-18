@@ -13,16 +13,8 @@ function contarLetras(frase){
 
 function numMax(n1, n2, n3){
     const result = document.getElementById("resultado3")
-    let mayor = undefined
-    if (n1 > n2 && n1 > n3){
-        mayor = n1
-    } else if (n2 > n1 && n2 > n3){
-        mayor = n2
-    } else if (n3 > n1 && n3 > n2) { 
-        mayor = n3
-    } // ARREGLAR
-    result.innerHTML = "El numero mas grande es: " + mayor
-}
+//ARREGLAR EL CODIGO
+}    
 
 function validarPassword(contra){
     const result = document.getElementById("resultado4")
@@ -121,4 +113,98 @@ function calcularPrecio(){
     const result = document.getElementById("resultado10")
     let resultado =    productos[0].precio + productos[1].precio + productos[2].precio 
     result.innerHTML = "precio total " + resultado
+}
+
+function map(){
+    const usuarios = [
+
+{nombre:"Ana", edad:17},
+
+{nombre:"Juan", edad:25},
+
+{nombre:"Pedro", edad:30}
+
+]
+const result = document.getElementById("resultado11")
+const nombres = usuarios.map(usuario => usuario.nombre)
+result.innerHTML = "nombres: " + nombres
+}
+
+function filter(){
+    const usuarios = [
+
+{nombre:"Ana", edad:17},
+
+{nombre:"Juan", edad:25},
+
+{nombre:"Pedro", edad:30}
+
+]
+const result = document.getElementById("resultado12")
+const mayoresDeEdad = usuarios.filter(usuario => usuario.edad >= 18)
+result.innerHTML = "mayores de edad: " + mayoresDeEdad.map(usuario => usuario.nombre)
+}
+
+function reduce(){
+    const numeros = [1, 2, 3, 4, 5]
+    const result = document.getElementById("resultado13")
+    const suma = numeros.reduce((acumulador, numero) => acumulador + numero, 0)
+    result.innerHTML = "suma total: " + suma
+}
+
+function Destructuring(){
+    const producto = {nombre: "Notebook", precio: 1000}
+    const {nombre, precio} = producto
+    const result = document.getElementById("resultado14")
+    result.innerHTML = `Nombre: ${nombre}, Precio: ${precio}`
+}
+
+function SpreadOperator(){
+    const producto1 = {nombre: "Notebook", precio: 1000}
+    const producto2 = {...producto1, stock: 5}
+    const result = document.getElementById("resultado15")
+    result.innerHTML = `Producto 1: ${producto1.nombre}, Precio: ${producto1.precio}, Stock: ${producto2.stock}`
+}
+
+function BuscarProducto(productos, nombreProducto){
+    const result = document.getElementById("resultado16")
+    const productoEncontrado = productos.find(producto => producto.nombre === nombreProducto)
+    if(productoEncontrado){
+        result.innerHTML = `Producto encontrado: ${productoEncontrado.nombre}, Precio: ${productoEncontrado.precio}`
+        console.log(productoEncontrado)
+    } else {
+        result.innerHTML = "Producto no encontrado"
+    }
+    //ARREGLAR EL CODIGO
+}
+
+function ProductosCaros(){
+    const productos = [
+{nombre:"Mouse", precio:10},
+{nombre:"Teclado", precio:25},
+{nombre:"Monitor", precio:200}
+]
+const result = document.getElementById("resultado17")
+const productosCaros = productos.filter(producto => producto.precio > 50)
+result.innerHTML = "Productos caros: " + productosCaros.map(producto => producto.nombre) + " con precio: " + productosCaros.map(producto => producto.precio)
+}
+
+function promedio(numeros){
+    const arrayNumeros = numeros.split(',')
+    let suma = 0
+    for(let i = 0; i < arrayNumeros.length; i++){
+        let texto = arrayNumeros[i].trim()
+        if(texto === "") continue
+        let num = Number(texto)
+        if(!isNaN(num)){
+            suma += num
+        }
+    }
+    const promedio = suma / arrayNumeros.length
+    const result = document.getElementById("resultado18")
+    result.innerHTML = "promedio: " + promedio
+}
+
+function API(){
+
 }
