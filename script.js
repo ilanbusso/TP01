@@ -166,16 +166,30 @@ function SpreadOperator(){
     result.innerHTML = `Producto 1: ${producto1.nombre}, Precio: ${producto1.precio}, Stock: ${producto2.stock}`
 }
 
-function BuscarProducto(productos, nombreProducto){
-    const result = document.getElementById("resultado16")
-    const productoEncontrado = productos.find(producto => producto.nombre === nombreProducto)
-    if(productoEncontrado){
-        result.innerHTML = `Producto encontrado: ${productoEncontrado.nombre}, Precio: ${productoEncontrado.precio}`
-        console.log(productoEncontrado)
+function buscarProducto(productos, nombre){
+
+    let arrayProductos = productos.split(',')
+
+    let encontrado = arrayProductos.find(function(p){
+        return p.trim() === nombre
+    })
+
+    return encontrado
+}
+
+function ejecutarBusqueda(){
+
+    let productos = document.getElementById("productos").value
+    let nombre = document.getElementById("nombreBuscar").value
+    let result = document.getElementById("resultado")
+
+    let resultado = buscarProducto(productos, nombre)
+
+    if(resultado){
+        result.innerHTML = "Producto encontrado: " + resultado
     } else {
         result.innerHTML = "Producto no encontrado"
     }
-    //ARREGLAR EL CODIGO
 }
 
 function ProductosCaros(){
@@ -205,6 +219,70 @@ function promedio(numeros){
     result.innerHTML = "promedio: " + promedio
 }
 
-function API(){
+function DevolverUsu(){
+const usuarios = [
+
+{id:1, nombre:"Ana", edad:20},
+
+{id:2, nombre:"Juan", edad:15},
+
+{id:3, nombre:"Pedro", edad:30}
+
+]
+
+const result = document.getElementById("resultado19")
+result.innerHTML = usuarios.map(usuarios => usuarios.nombre)
+}
+
+function obtenerUsuarioPorId(id){
+    const usuarios = [
+        {id:1, nombre:"Ana", edad:20},
+        {id:2, nombre:"Juan", edad:15},
+        {id:3, nombre:"Pedro", edad:30}
+    ]
+
+    const result = document.getElementById("resultado20")
+
+    let usuarioElegido = usuarios.find(u => u.id === Number(id))
+
+    if(usuarioElegido){
+        result.innerHTML = usuarioElegido.nombre
+    } else {
+        result.innerHTML = "Usuario no encontrado"
+    }
+}
+
+function obtenerMayores(){
+    const usuarios = [
+        {id:1, nombre:"Ana", edad:20},
+        {id:2, nombre:"Juan", edad:15},
+        {id:3, nombre:"Pedro", edad:30}
+    ]
+    
+    const result = document.getElementById("resultado21")
+
+    let usuariosMayores = usuarios.filter(u => u.edad >= 18)
+
+    result.innerHTML = "Los Usuarios mayores de edad son: " + usuariosMayores.map(usuarios => usuarios.nombre)
+}
+
+function crearUsuario(nombre, edad){
+    const usuarios = [
+        {id:1, nombre:"Ana", edad:20},
+        {id:2, nombre:"Juan", edad:15},
+        {id:3, nombre:"Pedro", edad:30}
+    ]
+
+    const result = document.getElementById("resultado22")
+    let nuevoUsuario = {
+        id: usuarios.length + 1,
+        nombre: nombre,
+        edad: Number(edad)
+    }
+
+    usuarios.push(nuevoUsuario)
+
+    result.innerHTML = `El nuevo usuario se llama ${nombre} y tiene ${edad}`
 
 }
+

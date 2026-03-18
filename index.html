@@ -144,12 +144,35 @@
         <p id="resultado18"></p>
     </div>
 
-    <div class="API">
-        <h1>API</h1>
-        <input type="text" id="numeros18" placeholder="ingrese una serie de numeros">
-        <button onclick="promedio(document.getElementById('numeros18').value)">calcular promedio</button>
+    <div class="ej19">
+        <h1>EJ19</h1>
+        <button onclick="DevolverUsu()">Mostrar Usuario</button>
         <h3>resultado:</h3>
-        <p id="resultadoAPI"></p>
+        <p id="resultado19"></p>
+    </div>
+
+    <div class="ej20">
+        <h1>EJ20</h1>
+        <input type="text" id="id" placeholder="ingrese el id de un usuario">
+        <button onclick="obtenerUsuarioPorId(document.getElementById('id').value)">Mostrar Usuario</button>
+        <h3>resultado:</h3>
+        <p id="resultado20"></p>
+    </div>
+
+    <div class="ej21">
+        <h1>EJ21</h1>
+        <button onclick="obtenerMayores()">Mostrar maqyores de edad</button>
+        <h3>resultado:</h3>
+        <p id="resultado21"></p>
+    </div>
+
+    <div class="ej22">
+        <h1>EJ22</h1>
+        <input type="text" id="nombreUsuario" placeholder="Ingrese el nombre">
+        <input type="text" id="edadUsuario" placeholder="Ingrese la edad">
+        <button onclick="crearUsuario(document.getElementById('nombreUsuario').value, document.getElementById('edadUsuario').value)">crear usuario</button>
+        <h3>resultado:</h3>
+        <p id="resultado22"></p>
     </div>
 </body>
 </html>
